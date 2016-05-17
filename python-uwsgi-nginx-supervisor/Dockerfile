@@ -12,6 +12,8 @@ RUN apk add --update \
 	linux-headers \
 	&& rm -rf /var/cache/apk/*
 
+RUN mkdir -p /etc/supervisor.d/
+
 EXPOSE 8000
 
 CMD ["supervisord", "-n"]
