@@ -1,7 +1,7 @@
 FROM python:3.5-alpine
 ENV PYTHONUNBUFFERED 1
 
-RUN apk add --update \
+RUN apk --update add \
 	nginx \
 	supervisor \
 	openssl \
