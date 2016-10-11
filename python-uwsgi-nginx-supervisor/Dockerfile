@@ -10,6 +10,7 @@ RUN apk add --update \
 	gcc \
 	musl-dev \
 	linux-headers \
+	git \
 	&& rm -rf /var/cache/apk/*
 
 RUN mkdir -p /etc/supervisor.d/
