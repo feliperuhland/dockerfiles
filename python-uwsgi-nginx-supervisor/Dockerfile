@@ -2,15 +2,16 @@ FROM python:3.5-alpine
 ENV PYTHONUNBUFFERED 1
 
 RUN apk --update add \
+	gcc \
+	git \
+	linux-headers \
+	make \
+	musl-dev \
 	nginx \
-	supervisor \
 	openssl \
 	postgresql-client \
 	postgresql-dev \
-	gcc \
-	musl-dev \
-	linux-headers \
-	git \
+	supervisor \
 	&& rm -rf /var/cache/apk/*
 
 RUN mkdir -p /etc/supervisor.d/
